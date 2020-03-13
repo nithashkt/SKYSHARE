@@ -1,0 +1,22 @@
+<br><h1><a href="/dashboard">Dashboard</a></h1>
+<br><br>
+Welcome <%= user.name %>
+     <br><br>
+<table class="table table-hover">
+    <tr>
+        <th>Code Title</th>
+        <th>Code Desc</th>
+        <th> Option</th>
+        <th>&nbsp;&nbsp;&nbsp;ID</th>
+    </tr>
+    <% myobject.forEach(function(data) { %>
+        <tr>
+            <td><%= data.code_title %></td>
+            <td><%= data.code_desc %></td>
+            <td> <a href="editdata/edit/<%= data._id %>">Edit</a></td>
+         <!--   <td> <a href="editdata/delete/<%= data._id %>">Delete</a></td> -->
+            <td><%= data._id %></td>
+        </tr>
+    <% }); %>
+</table>
+    
